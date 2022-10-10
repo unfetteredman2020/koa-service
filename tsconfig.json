@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "lib": [
+      "es2015"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    // "importHelpers": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "removeComments": false,
+    "emitDecoratorMetadata": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "rootDir": ".",
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+    },
+    "allowSyntheticDefaultImports": true
+  },
+  "include": [
+    "src",
+  ],
+  "files.exclude": {
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "**/*.js.map": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

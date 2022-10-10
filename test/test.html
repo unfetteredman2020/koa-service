@@ -1,0 +1,28 @@
+<!--
+ * @Author: 'weixingwang01'
+ * @Date: 2022-10-10 09:34:08
+ * @LastEditors: 'weixingwang01@bianfeng.com'
+ * @LastEditTime: 2022-10-10 10:02:03
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let str = 'I like you, but you don`t know, I`m sad.'
+    let newStr = str.split(' ').reverse().join(' ')
+    let a = newStr.split(' ').map(item=>{
+      if(item.includes(',') || item.includes('.')) {
+        return item.slice(item.length-1)+ item.slice(0, item.length-1)
+      }
+      return item
+    }).join(' ')
+    console.log('', a);
+  </script>
+</body>
+</html>

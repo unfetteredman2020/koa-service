@@ -1,0 +1,25 @@
+[2022-10-10T10:08:57.564] [ERROR] errors - TypeError: Cannot destructure property 'file' of 'ctx.request.file' as it is undefined.
+    at C:\Users\unfetteredman\project\custom-project\koa-service\src\router\modules\login.ts:16:11
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-router\lib\router.js:425:16
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-router\lib\router.js:430:31)
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at verifyParam (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-parameter\index.js:52:13)
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-body\index.js:148:14
+[2022-10-10T13:26:03.221] [ERROR] errors - TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:387:5)
+    at validateString (node:internal/validators:121:11)
+    at Object.basename (node:path:752:5)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\src\router\modules\login.ts:22:19
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-router\lib\router.js:425:16
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-router\lib\router.js:430:31)
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32) {
+  code: 'ERR_INVALID_ARG_TYPE',
+  headers: { 'Access-Control-Allow-Origin': '', vary: 'Origin' }
+}

@@ -1,0 +1,22 @@
+[2022-10-09T18:03:59.486] [ERROR] errors - TypeError: Cannot destructure property 'file' of 'ctx.request.body.files' as it is undefined.
+    at C:\Users\unfetteredman\project\custom-project\koa-service\src\router\modules\login.ts:17:11
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-router\lib\router.js:425:16
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-router\lib\router.js:430:31)
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at verifyParam (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-parameter\index.js:52:13)
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-body\index.js:148:14
+[2022-10-09T18:09:06.970] [ERROR] errors - TypeError: Cannot destructure property 'file' of 'ctx.request.body.files' as it is undefined.
+    at C:\Users\unfetteredman\project\custom-project\koa-service\src\router\modules\login.ts:17:11
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-router\lib\router.js:425:16
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:34:12
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-router\lib\router.js:430:31)
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at verifyParam (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-parameter\index.js:52:13)
+    at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+    at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-body\index.js:148:14
