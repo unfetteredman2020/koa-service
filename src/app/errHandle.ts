@@ -4,16 +4,12 @@
  * @LastEditors: 'weixingwang01@bianfeng.com'
  * @LastEditTime: 2022-10-10 16:14:36
  */
+import { Context } from 'koa';
+import { errLogger } from '../log/log';
 
-
-const { errLogger } = require('../log/log');
-
-export const errHandle = (err: Error) => {
+export const errHandle = (err: Error, ctx: Context) => {
   errLogger.error(err);
-  console.error('errHandle: ', err);
+  ctx.body = err;
 };
 
-module.exports = {
-  errHandle
-};
 

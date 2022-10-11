@@ -4,7 +4,7 @@
  * @LastEditors: 'weixingwang01@bianfeng.com'
  * @LastEditTime: 2022-10-11 09:39:56
  */
-import Koa, { DefaultContext, DefaultState } from 'Koa';
+import Koa, { DefaultContext, DefaultState, Context } from 'Koa';
 import router from '@/router/index';
 
 const path = require('path');
@@ -43,9 +43,10 @@ app.use(
       keepExtensions: true,
     },
     parsedMethods: ['POST', 'PUT', 'PATCH', 'GET', 'DELETE'],
-    onError: (err: Error) => {
+    onError: (err: Error, ctx: Context) => {
       console.log('onError error:', err);
       errLogger.error(err);
+      ctx.app.emit('err', err, ctx);
     },
   })
 );

@@ -11,8 +11,14 @@ const config = require('../config/log.config');
 
 log4js.configure(config);
 
-module.exports = {
-  logger: log4js.koaLogger(log4js.getLogger('success'), { level: 'info' }),
-  errLogger: log4js.getLogger('errors'),
-  warnLogger: log4js.getLogger('warn')
-};
+export const logger = log4js.koaLogger(log4js.getLogger('success'), { level: 'info' });
+
+export const errLogger = log4js.getLogger('errors');
+
+export const warnLogger = log4js.getLogger('warn');
+
+// export default {
+//   logger: log4js.koaLogger(log4js.getLogger('success'), { level: 'info' }),
+//   errLogger: log4js.getLogger('errors'),
+//   warnLogger: log4js.getLogger('warn')
+// };

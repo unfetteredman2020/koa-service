@@ -6,13 +6,12 @@
  * @LastEditTime: 2022-10-11 15:05:08
  */
 import Router from 'koa-router';
-import { Context, Next } from 'koa';
+import { Next } from 'koa';
+import { joiValidate } from '@/middleware/joiValidateMiddleWare';
+import { loginSchema } from '@/joiValidator/login.validate';
 
 const router: Router = new Router();
 
-router.get('/', (ctx: Context) => {
-  ctx.body = ctx;
-});
 /**
  * @swagger
  * /goods/upload:
@@ -69,13 +68,14 @@ router.get('/', (ctx: Context) => {
  *          description: successful operation
  * */
 
-router.post('/goods/upload', (ctx: any, next: Next) => {
-  const { file } = ctx.request.files;
-  const files = ctx.request.files.file;
-  if (Array.isArray(files)) {
-    console.log('array');
-  }
-  ctx.body = file;
+router.post('/', joiValidate(loginSchema), (ctx: any, next: Next) => {
+  console.log('first2');
+  // const { file } = ctx.request.files;
+  // const files = ctx.request.files.file;
+  // if (Array.isArray(files)) {
+  //   console.log('array');
+  // }
+  ctx.body = ctx;
   next();
 });
 
