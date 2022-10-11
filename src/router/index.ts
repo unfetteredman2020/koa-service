@@ -2,29 +2,36 @@
  * @Author: 'weixingwang01'
  * @Date: 2022-10-08 14:47:30
  * @LastEditors: 'weixingwang01@bianfeng.com'
- * @LastEditTime: 2022-10-09 10:06:43
+ * @LastEditTime: 2022-10-11 14:16:13
  */
-export {};
+import Login from './modules/login.route';
+import Swagger from './modules/swagger.route';
 
-const fs = require('fs');
-const path = require('path');
+// const fs = require('fs');
+// const path = require('path');
 const KoaRouter = require('koa-router');
 // const requireDirectory = require('require-directory');
+
+
 const router = new KoaRouter();
 
-try {
-  const ps = path.resolve(__dirname, './modules/');
-  fs.readdir(ps, 'utf8', (err:any, data:any[]) => {
-    if (err) console.error('router error', err);
-    data.forEach((file) => {
-      const r = require(`${ps}/${file}`);
-      router.use(r.routes());
-    });
-  });
-} catch (error) {
-  console.log('fs router file error', error);
-}
+router.use(Login.routes()).use(Swagger.routes());
 
+// 通过fs读取module模块，循环导入加载模块，支持require语法
+// try {
+//   const ps = path.resolve(__dirname, './modules/');
+//   fs.readdir(ps, 'utf8', (err:Error, data:[]) => {
+//     if (err) console.error('router error', err);
+//     data.forEach((file) => {
+//       const r = require(`${ps}/${file}`);
+//       router.use(r.routes());
+//     });
+//   });
+// } catch (error) {
+//   console.log('fs router file error', error);
+// }
+
+// requireDirectory 第三方库加载路由，支持require动态导入
 // function whenLoadModule(obj: any) {
 //   console.log('obj', obj);
 //   if (obj instanceof KoaRouter) {
@@ -41,4 +48,4 @@ try {
 //   console.log('error', error);
 // }
 
-module.exports = router;
+export default router;

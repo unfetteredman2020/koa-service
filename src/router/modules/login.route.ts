@@ -3,15 +3,14 @@
  * @Author: 'weixingwang01'
  * @Date: 2022-10-08 14:47:46
  * @LastEditors: 'weixingwang01@bianfeng.com'
- * @LastEditTime: 2022-10-10 10:16:00
+ * @LastEditTime: 2022-10-11 15:05:08
  */
-const path = require('path');
-const Router = require('koa-router');
-const swaggerJSDoc = require('swagger-jsdoc'); //引入swagger-jsdoc
+import Router from 'koa-router';
+import { Context, Next } from 'koa';
 
-const router = new Router();
+const router: Router = new Router();
 
-router.get('/', (ctx: any) => {
+router.get('/', (ctx: Context) => {
   ctx.body = ctx;
 });
 /**
@@ -70,7 +69,7 @@ router.get('/', (ctx: any) => {
  *          description: successful operation
  * */
 
-router.post('/goods/upload', (ctx: any, next: any) => {
+router.post('/goods/upload', (ctx: any, next: Next) => {
   const { file } = ctx.request.files;
   const files = ctx.request.files.file;
   if (Array.isArray(files)) {
@@ -80,4 +79,4 @@ router.post('/goods/upload', (ctx: any, next: any) => {
   next();
 });
 
-module.exports = router;
+export default router;

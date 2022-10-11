@@ -8,7 +8,7 @@
       "es2015"
     ],
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
     ],
     // "importHelpers": true,
     "sourceMap": true,
@@ -30,6 +30,7 @@
   },
   "include": [
     "src",
+    "typings.d.ts"
   ],
   "files.exclude": {
     "**/*.js": {

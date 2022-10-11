@@ -4,8 +4,6 @@
  * @LastEditors: 'weixingwang01@bianfeng.com'
  * @LastEditTime: 2022-10-10 15:50:33
  */
-export {};
-
 const path = require('path');
 const jsdoc = require('swagger-jsdoc');
 
@@ -26,4 +24,4 @@ const options = {
 
 const swaggerSpec = jsdoc(options);
 
-module.exports = swaggerSpec;
+export default swaggerSpec;

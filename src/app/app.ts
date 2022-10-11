@@ -5,6 +5,7 @@
  * @LastEditTime: 2022-10-11 09:39:56
  */
 import Koa, { DefaultContext, DefaultState } from 'Koa';
+import router from '@/router/index';
 
 const path = require('path');
 const koaBody = require('koa-body');
@@ -13,7 +14,6 @@ const parameter = require('koa-parameter'); // 参数校验
 const koaCors = require('@koa/cors');
 const { koaSwagger } = require('koa2-swagger-ui');
 
-const router = require('@/router/index');
 const { errHandle } = require('./errHandle');
 const { logger, errLogger } = require('../log/log');
 

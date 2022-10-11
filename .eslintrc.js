@@ -1,29 +1,30 @@
 module.exports = {
   env: {
-    browser: true,
     es6: true,
     node: true,
   },
+  root: true,
   extends: [
     'airbnb-base',
+    'plugin:@typescript-eslint/recommended'
   ],
-  globals: { 
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
-  },
   parser: '@typescript-eslint/parser',
   parserOptions: {
     // ecmaFeatures: {
     //   jsx: true,
     // },
+    // project: 'tsconfig.json',
     ecmaVersion: 2018,
-    // sourceType: 'module',
+    sourceType: 'module',
   },
+  
   plugins: [
-    '@typescript-eslint',
+    '@typescript-eslint/eslint-plugin',
   ],
   rules: {
+    '@typescript-eslint/no-var-requires': 0,
     'no-undef': 'off',
+    '@typescript-eslint/no-explicit-any': ['off'],
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
     'import/no-unresolved': 'off',
