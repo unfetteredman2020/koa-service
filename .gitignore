@@ -6,6 +6,8 @@
 /yarn-error.log
 /package-lock.json
 .idea
+.vscode
+/log/
 /build/
 
 # production
@@ -14,8 +16,4 @@
 # misc
 .DS_Store
 
-# umi
-/src/.umi
-/src/.umi-production
-/src/.umi-test
-/.env.local
+
