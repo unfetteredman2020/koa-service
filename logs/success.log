@@ -341,3 +341,7 @@
 [2022-10-10T16:01:07.039] [INFO] success - ::1 - - "GET /swagger/index.html HTTP/1.1" 200 3856 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
 [2022-10-10T16:01:07.107] [INFO] success - ::1 - - "GET /swagger/swagger.json HTTP/1.1" 200 1131 "http://localhost:3000/swagger/index.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
 [2022-10-10T16:01:07.113] [INFO] success - ::1 - - "GET /favicon.png HTTP/1.1" 200 - "http://localhost:3000/swagger/index.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
+[2022-10-10T16:10:02.297] [INFO] success - ::1 - - "POST /goods/createGoods HTTP/1.1" 404 - "" "PostmanRuntime/7.29.2"
+[2022-10-10T16:15:54.437] [INFO] success - ::1 - - "GET /swagger/index.html HTTP/1.1" 200 3856 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
+[2022-10-10T16:15:54.721] [INFO] success - ::1 - - "GET /swagger/swagger.json HTTP/1.1" 200 1131 "http://localhost:3000/swagger/index.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
+[2022-10-10T16:15:54.727] [INFO] success - ::1 - - "GET /favicon.png HTTP/1.1" 200 - "http://localhost:3000/swagger/index.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"

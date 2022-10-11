@@ -7,11 +7,12 @@
 /package-lock.json
 .idea
 .vscode
-/log/
+/logs
 /build/
 
 # production
 /dist
+/test
 
 # misc
 .DS_Store
