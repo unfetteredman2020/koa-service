@@ -1,7 +1,7 @@
 /*
  * @Author: 'weixingwang01'
  * @Date: 2022-10-09 10:44:10
- * @LastEditors: 'weixingwang01@bianfeng.com'
+ * @LastEditors: 'weixw2014@qq.com'
  * @LastEditTime: 2022-10-09 11:33:13
  */
 const { Sequelize } = require('sequelize');

@@ -9,6 +9,7 @@
     ],
     "typeRoots": [
       "node_modules/@types",
+      "./src/@types"
     ],
     // "importHelpers": true,
     "sourceMap": true,
@@ -16,6 +17,7 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "noImplicitReturns": true,
+    
     "esModuleInterop": true,
     "removeComments": false,
     "emitDecoratorMetadata": false,
@@ -30,7 +32,6 @@
   },
   "include": [
     "src",
-    "typings.d.ts"
   ],
   "files.exclude": {
     "**/*.js": {

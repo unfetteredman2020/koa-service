@@ -1,8 +1,8 @@
 /*
  * @Author: 'weixingwang01'
  * @Date: 2022-10-09 11:46:36
- * @LastEditors: 'weixingwang01@bianfeng.com'
- * @LastEditTime: 2022-10-11 09:39:56
+ * @LastEditors: 'weixw2014@qq.com'
+ * @LastEditTime: 2022-10-12 09:37:13
  */
 import Koa, { DefaultContext, DefaultState, Context } from 'Koa';
 import router from '@/router/index';
@@ -51,8 +51,14 @@ app.use(
   })
 );
 
+// 设置withCredentials为true时，Access-Control-Allow-Origin不能设置为*
 app.use(
   koaCors({
+    origin() {
+      return '*';
+    },
+    exposeHeaders: ['Authorization'],
+    maxAge: 5 * 24 * 60 * 60,
     allowMethods: ['GET', 'POST', 'OPTIONS', 'DELETE'],
     allowHeaders: ['Content-Type', 'Authorization', 'Accept', 'X-Requested-With'],
   })

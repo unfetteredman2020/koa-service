@@ -2,15 +2,17 @@
 /*
  * @Author: 'weixingwang01'
  * @Date: 2022-10-08 14:47:46
- * @LastEditors: 'weixingwang01@bianfeng.com'
- * @LastEditTime: 2022-10-11 15:05:08
+ * @LastEditors: 'weixw2014@qq.com'
+ * @LastEditTime: 2022-10-12 10:28:47
  */
 import Router from 'koa-router';
-import { Next } from 'koa';
+import { Next, Context } from 'koa';
 import { joiValidate } from '@/middleware/joiValidateMiddleWare';
 import { loginSchema } from '@/joiValidator/login.validate';
 
 const router: Router = new Router();
+
+
 
 /**
  * @swagger
@@ -68,15 +70,26 @@ const router: Router = new Router();
  *          description: successful operation
  * */
 
-router.post('/', joiValidate(loginSchema), (ctx: any, next: Next) => {
-  console.log('first2');
+router.post('/', (ctx: Context, next: Next) => {
+  console.log('first2', ctx);
   // const { file } = ctx.request.files;
-  // const files = ctx.request.files.file;
-  // if (Array.isArray(files)) {
-  //   console.log('array');
-  // }
+  const files = ctx.request.files.file;
+  console.log('first', ctx.request.files);
+  if (Array.isArray(files)) {
+    console.log('array');
+  }
   ctx.body = ctx;
   next();
 });
 
+router.post('/upload', joiValidate(loginSchema), (ctx: any, next: Next) => {
+  console.log('first2', ctx);
+  // const { file } = ctx.request.files;
+  const files = ctx.request.files.file;
+  if (Array.isArray(files)) {
+    console.log('array');
+  }
+  ctx.body = ctx;
+  next();
+});
 export default router;
