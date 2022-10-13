@@ -1,7 +1,7 @@
 /*
  * @Author: 'weixingwang01'
  * @Date: 2022-10-08 14:47:46
- * @LastEditors: 'weixingwang01@bianfeng.com'
+ * @LastEditors: 'weixw2014@qq.com'
  * @LastEditTime: 2022-10-13 10:09:01
  */
 import Router from 'koa-router';
@@ -72,12 +72,9 @@ router.post('/', (ctx: Context, next: Next) => {
   next();
 });
 
-
 router.post('/upload', joiValidate(loginSchema), (ctx: Context, next: Next) => {
-  console.log('first2', ctx);
-  // const { file } = ctx.request.files;
-  const files = ctx.request.files.file;
-  if (Array.isArray(files)) {
+  const { file } = ctx.request.files;
+  if (Array.isArray(file)) {
     console.log('array11');
   } else {
     console.log('object');
