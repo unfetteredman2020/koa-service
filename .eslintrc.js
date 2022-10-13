@@ -14,15 +14,15 @@ module.exports = {
     //   jsx: true,
     // },
     // project: 'tsconfig.json',
-    ecmaVersion: 2018,
+    // ecmaVersion: 2018,
     sourceType: 'module',
   },
-  
   plugins: [
     '@typescript-eslint/eslint-plugin',
   ],
   rules: {
-    '@typescript-eslint/no-var-requires': 0,
+    '@typescript-eslint/no-var-requires': 0, // arrow import & require modules
+    '@typescript-eslint/no-unused-vars': 0, // arrow import empty modules
     'no-undef': 'off',
     '@typescript-eslint/no-explicit-any': ['off'],
     'import/no-extraneous-dependencies': 'off',

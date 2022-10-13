@@ -4,17 +4,16 @@
  * @LastEditors: 'weixw2014@qq.com'
  * @LastEditTime: 2022-10-11 14:16:13
  */
-import { DefaultState, Context } from 'koa';
 import Login from './modules/login.route';
 import Swagger from './modules/swagger.route';
 
 // const fs = require('fs');
 // const path = require('path');
-const KoaRouter = require('koa-router');
+import KoaRouter = require('koa-router');
 // const requireDirectory = require('require-directory');
 
 
-const router = new KoaRouter<DefaultState, Context>();
+const router : KoaRouter = new KoaRouter();
 
 router.use(Login.routes()).use(Swagger.routes());
 

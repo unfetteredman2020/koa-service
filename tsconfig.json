@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "dist",
     "target": "es5",
     "module": "CommonJS",
     "moduleResolution": "node",
@@ -17,7 +18,7 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "noImplicitReturns": true,
-    
+    "strictNullChecks": false,
     "esModuleInterop": true,
     "removeComments": false,
     "emitDecoratorMetadata": false,
@@ -31,14 +32,14 @@
     "allowSyntheticDefaultImports": true
   },
   "include": [
-    "src",
+    "src/**/*",
   ],
-  "files.exclude": {
-    "**/*.js": {
-      "when": "$(basename).ts"
-    },
-    "**/*.js.map": true
-  },
+  // "files.exclude": {
+  //   "**/*.js": {
+  //     "when": "$(basename).ts"
+  //   },
+  //   "**/*.js.map": true
+  // },
   "exclude": [
     "node_modules"
   ]

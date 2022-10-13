@@ -7,7 +7,8 @@
 import Koa, { DefaultContext, DefaultState, Context } from 'Koa';
 import router from '@/router/index';
 
-const path = require('path');
+import path from 'path';
+
 const koaBody = require('koa-body');
 const koaStatic = require('koa-static');
 const parameter = require('koa-parameter'); // 参数校验
