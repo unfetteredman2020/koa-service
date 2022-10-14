@@ -1,15 +1,18 @@
 /*
  * @Author: 'weixingwang01'
  * @Date: 2022-10-08 14:47:46
- * @LastEditors: 'weixw2014@qq.com'
- * @LastEditTime: 2022-10-13 10:09:01
+ * @LastEditors: weixw2014@qq.com
+ * @LastEditTime: 2022-10-14 16:46:31
  */
 import Router from 'koa-router';
 import { Next, Context } from 'koa';
-import { joiValidate } from '@/middleware/joiValidateMiddleWare';
-import { loginSchema } from '@/joiValidator/login.validate';
+import { joiValidate } from '@/middleware/joiValidateMiddleware';
+import authMiddleWare from '@/middleware/authMiddleware';
+import { loginSchema } from '@/joiValidator/user/login.validate';
+import userController from '@/controller/user.controller';
+import { verifyUser } from '@/middleware/userMiddleware';
 
-const router: Router = new Router();
+const router: Router = new Router({ prefix: '/user' });
 
 /**
  * @swagger
@@ -67,12 +70,9 @@ const router: Router = new Router();
  *          description: successful operation
  * */
 
-router.post('/', (ctx: Context, next: Next) => {
-  ctx.body = ctx;
-  next();
-});
+router.post('/login', joiValidate(loginSchema), verifyUser(true), userController.loginController);
 
-router.post('/upload', joiValidate(loginSchema), (ctx: Context, next: Next) => {
+router.post('/upload', authMiddleWare.verifyToken, joiValidate(loginSchema), (ctx: Context, next: Next) => {
   const { file } = ctx.request.files;
   if (Array.isArray(file)) {
     console.log('array11');

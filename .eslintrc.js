@@ -24,6 +24,8 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0, // arrow import & require modules
     '@typescript-eslint/no-unused-vars': 0, // arrow import empty modules
     'no-undef': 'off',
+    'no-shadow': 'off', // resolve errror for XXX is already declared in XXXX
+    '@typescript-eslint/no-shadow': 'off', // resolve errror for XXX is already declared in XXXX
     '@typescript-eslint/no-explicit-any': ['off'],
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',

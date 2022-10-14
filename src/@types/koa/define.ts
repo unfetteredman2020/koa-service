@@ -9,5 +9,6 @@ import Koa = require('koa');
 declare module 'koa' {
     interface Request {
         files?: any
+        body?: any
     }
 }

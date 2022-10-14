@@ -6,8 +6,8 @@
  */
 import Koa, { DefaultContext, DefaultState, Context } from 'Koa';
 import router from '@/router/index';
-
 import path from 'path';
+
 
 const koaBody = require('koa-body');
 const koaStatic = require('koa-static');
@@ -19,6 +19,8 @@ const { errHandle } = require('./errHandle');
 const { logger, errLogger } = require('../log/log');
 
 const app: Koa<DefaultState, DefaultContext> = new Koa();
+
+const { PORT } = process.env;
 
 app.on('error', errHandle);
 
@@ -77,6 +79,6 @@ app.use(
   })
 );
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log('服务启动成功，running http://127.0.0.1:3000');
 });
