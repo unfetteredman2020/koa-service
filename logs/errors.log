@@ -1,305 +1,49 @@
-[2022-10-14T16:29:58.332] [ERROR] errors - {
+[2022-10-26T13:48:20.544] [ERROR] errors - { code: 400, msg: 'token 参数错误', result: null }
+[2022-10-26T13:48:48.166] [ERROR] errors - { code: 400, msg: 'token 参数错误', result: null }
+[2022-10-26T13:48:55.339] [ERROR] errors - { code: 400, msg: 'token 验证失败', result: null }
+[2022-10-26T13:50:07.200] [ERROR] errors - { code: 400, msg: 'token 验证失败', result: null }
+[2022-10-26T13:54:57.417] [ERROR] errors - {
   code: 400,
-  msg: '用户不存在',
-  result: Error: WHERE parameter "username" has invalid "undefined" value
-      at MySQLQueryGenerator.whereItemQuery (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\sequelize\src\dialects\abstract\query-generator.js:2374:13)
-      at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\sequelize\src\dialects\abstract\query-generator.js:2363:25
-      at Array.forEach (<anonymous>)
-      at MySQLQueryGenerator.whereItemsQuery (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\sequelize\src\dialects\abstract\query-generator.js:2361:35)
-      at MySQLQueryGenerator._whereGroupBind (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\sequelize\src\dialects\abstract\query-generator.js:2506:20)
-      at MySQLQueryGenerator.whereItemQuery (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\sequelize\src\dialects\abstract\query-generator.js:2432:19)
-      at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\sequelize\src\dialects\abstract\query-generator.js:2363:25
-      at Array.forEach (<anonymous>)
-      at MySQLQueryGenerator.whereItemsQuery (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\sequelize\src\dialects\abstract\query-generator.js:2361:35)
-      at MySQLQueryGenerator.getWhereConditions (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\sequelize\src\dialects\abstract\query-generator.js:2789:19)
+  msg: 'token 验证失败',
+  result: JsonWebTokenError: invalid token
+      at Object.module.exports [as verify] (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\jsonwebtoken\verify.js:75:17)
+      at C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:21:11
+      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:14:53)
+      at C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:4:12)
+      at AuthMiddleware.verifyToken (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:55:16)
+      at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+      at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-router\lib\router.js:425:16
 }
-[2022-10-14T16:33:19.162] [ERROR] errors - [Error [ValidationError]: "userName" is required] {
-  _original: {},
-  details: [
-    {
-      message: '"userName" is required',
-      path: [Array],
-      type: 'any.required',
-      context: [Object]
-    }
-  ]
-}
-[2022-10-14T16:33:41.190] [ERROR] errors - [Error [ValidationError]: "userName" is required] {
-  _original: {},
-  details: [
-    {
-      message: '"userName" is required',
-      path: [Array],
-      type: 'any.required',
-      context: [Object]
-    }
-  ]
-}
-[2022-10-14T16:33:42.844] [ERROR] errors - [Error [ValidationError]: "userName" is required] {
-  _original: {},
-  details: [
-    {
-      message: '"userName" is required',
-      path: [Array],
-      type: 'any.required',
-      context: [Object]
-    }
-  ]
-}
-[2022-10-14T16:33:44.094] [ERROR] errors - [Error [ValidationError]: "userName" is required] {
-  _original: {},
-  details: [
-    {
-      message: '"userName" is required',
-      path: [Array],
-      type: 'any.required',
-      context: [Object]
-    }
-  ]
-}
-[2022-10-14T16:34:01.247] [ERROR] errors - [Error [ValidationError]: "userName" is required] {
-  _original: {},
-  details: [
-    {
-      message: '"userName" is required',
-      path: [Array],
-      type: 'any.required',
-      context: [Object]
-    }
-  ]
-}
-[2022-10-14T16:34:33.458] [ERROR] errors - [Error [ValidationError]: "userName" is required] {
-  _original: { username: 'tom' },
-  details: [
-    {
-      message: '"userName" is required',
-      path: [Array],
-      type: 'any.required',
-      context: [Object]
-    }
-  ]
-}
-[2022-10-14T16:35:19.695] [ERROR] errors - [Error [ValidationError]: "userName" is required] {
-  _original: { username: 'tom', password: '1232' },
-  details: [
-    {
-      message: '"userName" is required',
-      path: [Array],
-      type: 'any.required',
-      context: [Object]
-    }
-  ]
-}
-[2022-10-14T16:35:40.549] [ERROR] errors - [Error [ValidationError]: "userName" is required] {
-  _original: { username: 'tom', password: '1232' },
-  details: [
-    {
-      message: '"userName" is required',
-      path: [Array],
-      type: 'any.required',
-      context: [Object]
-    }
-  ]
-}
-[2022-10-14T16:36:47.463] [ERROR] errors - [Error [ValidationError]: "userName" is required] {
-  _original: { username: 'tom', password: '1232' },
-  details: [
-    {
-      message: '"userName" is required',
-      path: [Array],
-      type: 'any.required',
-      context: [Object]
-    }
-  ]
-}
-[2022-10-14T16:38:28.596] [ERROR] errors - [Error [ValidationError]: "userName" is required] {
-  _original: { username: 'tom', password: '1232' },
-  details: [
-    {
-      message: '"userName" is required',
-      path: [Array],
-      type: 'any.required',
-      context: [Object]
-    }
-  ]
-}
-[2022-10-14T16:46:42.077] [ERROR] errors - {
+[2022-10-26T13:55:40.104] [ERROR] errors - {
   code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:17:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  msg: 'token 验证失败',
+  result: JsonWebTokenError: invalid token
+      at Object.module.exports [as verify] (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\jsonwebtoken\verify.js:75:17)
+      at C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:21:11
+      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:14:53)
+      at C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:4:12)
+      at AuthMiddleware.verifyToken (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:55:16)
+      at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+      at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-router\lib\router.js:425:16
 }
-[2022-10-14T16:46:44.506] [ERROR] errors - {
+[2022-10-26T13:58:36.247] [ERROR] errors - {
   code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:17:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T16:46:45.501] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:17:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T16:46:46.316] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:17:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T16:46:47.116] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:17:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T16:46:47.982] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:17:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T16:47:23.409] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:17:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T16:51:03.762] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:18:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T16:52:33.408] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:18:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T16:53:28.552] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:18:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T16:58:11.410] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:18:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T16:59:13.971] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:18:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T17:00:15.272] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:18:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T17:03:45.738] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:18:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T17:04:20.937] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:18:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T17:05:11.785] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot read properties of null (reading 'username')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:18:15
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T17:06:24.860] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot set properties of null (setting 'token')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:22:32
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
-}
-[2022-10-14T17:09:02.143] [ERROR] errors - {
-  code: 400,
-  msg: '用户登录失败，请稍后重试',
-  result: TypeError: Cannot set properties of null (setting 'token')
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:22:35
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:14:53)
-      at fulfilled (C:\Users\unfetteredman\project\custom-project\koa-service\src\controller\user.controller.ts:5:58)
-      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+  msg: 'token 验证失败',
+  result: JsonWebTokenError: invalid token
+      at Object.module.exports [as verify] (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\jsonwebtoken\verify.js:75:17)
+      at C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:21:11
+      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:14:53)
+      at C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:8:71
+      at new Promise (<anonymous>)
+      at __awaiter (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:4:12)
+      at AuthMiddleware.verifyToken (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:55:16)
+      at dispatch (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-compose\index.js:42:32)
+      at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\koa-router\lib\router.js:425:16
 }

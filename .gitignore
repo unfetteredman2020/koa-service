@@ -12,7 +12,9 @@
 
 # production
 /dist
+
 /test
+
 
 # misc
 .DS_Store

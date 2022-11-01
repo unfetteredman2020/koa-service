@@ -34,13 +34,14 @@
   "include": [
     "src/**/*",
   ],
-  // "files.exclude": {
-  //   "**/*.js": {
-  //     "when": "$(basename).ts"
-  //   },
-  //   "**/*.js.map": true
-  // },
+  "files.exclude": {
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "**/*.js.map": true
+  },
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "test"
   ]
 }

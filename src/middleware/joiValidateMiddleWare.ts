@@ -2,9 +2,9 @@
  * @Author: 'weixingwang01'
  * @Date: 2022-10-11 10:59:42
  * @LastEditors: weixw2014@qq.com
- * @LastEditTime: 2022-10-14 17:53:39
+ * @LastEditTime: 2022-10-26 13:22:35
  */
-import { Context, Next } from 'koa';
+import type { Context, Next } from 'koa';
 import Joi from 'joi';
 
 export const joiValidate = (schema: Joi.Schema) => async(ctx: Context, next: Next): Promise<any> => {

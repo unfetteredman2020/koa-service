@@ -2,10 +2,10 @@
  * @Author: unfetteredman
  * @Date: 2022-10-10 13:49:39
  * @LastEditors: weixw2014@qq.com
- * @LastEditTime: 2022-10-14 17:08:07
+ * @LastEditTime: 2022-10-26 14:02:18
  */
 import JWT from 'jsonwebtoken';
-import { Context } from 'koa';
+import type { Context } from 'koa';
 
 const { SECRETKEY } = process.env;
 
