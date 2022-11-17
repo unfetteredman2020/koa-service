@@ -2,7 +2,7 @@
  * @Author: unfetteredman
  * @Date: 2022-11-15 14:17:32
  * @LastEditors: unfetteredman
- * @LastEditTime: 2022-11-15 16:49:34
+ * @LastEditTime: 2022-11-17 09:42:06
  */
 namespace ResponseBody {
   export interface ResponseBodyResult {
@@ -28,5 +28,4 @@ interface CreateResponseResultProps {
   result?: any,
 }
 
-declare function createResponseResult (code: ServerCodeEnums, msg: string, result?: any) : CreateResponseResults
 
