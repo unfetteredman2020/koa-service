@@ -1,12 +1,12 @@
 /*
  * @Author: 'weixingwang01'
  * @Date: 2022-10-08 14:47:30
- * @LastEditors: 'weixw2014@qq.com'
- * @LastEditTime: 2022-10-11 14:16:13
+ * @LastEditors: unfetteredman
+ * @LastEditTime: 2022-11-14 17:41:05
  */
 import Login from './modules/login.route';
 import Swagger from './modules/swagger.route';
-
+import moduleName from './modules/config.route';
 // const fs = require('fs');
 // const path = require('path');
 import KoaRouter = require('koa-router');
@@ -15,7 +15,7 @@ import KoaRouter = require('koa-router');
 
 const router : KoaRouter = new KoaRouter();
 
-router.use(Login.routes()).use(Swagger.routes());
+router.use(Login.routes()).use(Swagger.routes()).use(moduleName.routes());
 
 // 通过fs读取module模块，循环导入加载模块，支持require语法
 // try {

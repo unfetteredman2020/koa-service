@@ -1,17 +1,118 @@
-[2022-11-01T16:05:49.452] [ERROR] errors - {
-  code: 404,
-  msg: 'token 过期',
-  result: TokenExpiredError: jwt expired
-      at C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\jsonwebtoken\verify.js:152:21
-      at getSecret (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\jsonwebtoken\verify.js:90:14)
-      at Object.module.exports [as verify] (C:\Users\unfetteredman\project\custom-project\koa-service\node_modules\jsonwebtoken\verify.js:94:10)
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:28:11
-      at step (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:33:23)
-      at Object.next (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:14:53)
-      at C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:8:71
-      at new Promise (<anonymous>)
-      at __awaiter (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:4:12)
-      at AuthMiddleware.verifyToken (C:\Users\unfetteredman\project\custom-project\koa-service\src\middleware\authMiddleware.ts:62:16) {
-    expiredAt: 2022-10-27T05:49:54.000Z
-  }
+[2022-11-15T10:33:21.238] [ERROR] errors - SyntaxError: Unexpected token l in JSON at position 7
+    at JSON.parse (<anonymous>)
+    at parse (C:\Users\unfetteredman\project\custom-project\current\koa-service\node_modules\co-body\lib\json.js:62:17)
+    at C:\Users\unfetteredman\project\custom-project\current\koa-service\node_modules\co-body\lib\json.js:45:22
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\unfetteredman\project\custom-project\current\koa-service\node_modules\koa-log4\koa-logger.js:86:7
+    at async serve (C:\Users\unfetteredman\project\custom-project\current\koa-service\node_modules\koa-static\index.js:53:9) {
+  status: 400,
+  body: '{\r\n' +
+    '    list: [{\r\n' +
+    '      pagePath: "/index/index",\r\n' +
+    '      iconPath: "/image/icon_component.png",\r\n' +
+    '      selectedIconPath: "/image/icon_component_HL.png",\r\n' +
+    '      text: "组件"\r\n' +
+    '    }, {\r\n' +
+    '      pagePath: "/index/index2",\r\n' +
+    '      iconPath: "/image/icon_API.png",\r\n' +
+    '      selectedIconPath: "/image/icon_API_HL.png",\r\n' +
+    '      text: "接口"\r\n' +
+    '    }]\r\n' +
+    '}'
+}
+[2022-11-15T10:33:21.240] [ERROR] errors - Error: next() called multiple times
+    at dispatch (C:\Users\unfetteredman\project\custom-project\current\koa-service\node_modules\koa-compose\index.js:36:45)
+    at C:\Users\unfetteredman\project\custom-project\current\koa-service\node_modules\koa-body\index.js:148:14
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async C:\Users\unfetteredman\project\custom-project\current\koa-service\node_modules\koa-log4\koa-logger.js:86:7
+    at async serve (C:\Users\unfetteredman\project\custom-project\current\koa-service\node_modules\koa-static\index.js:53:9)
+[2022-11-15T15:19:17.047] [ERROR] errors - {
+  code: 400,
+  msg: '用户不存在',
+  result: ReferenceError: CreateResponseResult is not defined
+      at C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:24:22
+      at step (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:14:53)
+      at fulfilled (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+}
+[2022-11-15T15:19:39.782] [ERROR] errors - {
+  code: 400,
+  msg: '用户不存在',
+  result: ReferenceError: CreateResponseResult is not defined
+      at C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:24:22
+      at step (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:14:53)
+      at fulfilled (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+}
+[2022-11-15T15:21:57.623] [ERROR] errors - {
+  code: 400,
+  msg: '查找用户失败！',
+  result: ReferenceError: CreateResponseResult is not defined
+      at C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:24:22
+      at step (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:14:53)
+      at fulfilled (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+}
+[2022-11-15T15:30:25.869] [ERROR] errors - {
+  code: 400,
+  msg: '查找用户失败！',
+  result: ReferenceError: createResponseResult is not defined
+      at C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:24:22
+      at step (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:14:53)
+      at fulfilled (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+}
+[2022-11-15T15:52:27.922] [ERROR] errors - {
+  code: 400,
+  msg: '查找用户失败！',
+  result: ReferenceError: createResponseResult is not defined
+      at C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:24:22
+      at step (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:14:53)
+      at fulfilled (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+}
+[2022-11-15T16:07:17.930] [ERROR] errors - {
+  code: 400,
+  msg: '查找用户失败！',
+  result: ReferenceError: createResponseResult is not defined
+      at C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:24:22
+      at step (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:14:53)
+      at fulfilled (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+}
+[2022-11-15T16:11:21.643] [ERROR] errors - {
+  code: 400,
+  msg: '查找用户失败！',
+  result: ReferenceError: createResponseResult is not defined
+      at C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:24:22
+      at step (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:14:53)
+      at fulfilled (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+}
+[2022-11-15T16:12:18.552] [ERROR] errors - {
+  code: 400,
+  msg: '查找用户失败！',
+  result: ReferenceError: createResponseResult is not defined
+      at C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:24:43
+      at step (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:14:53)
+      at fulfilled (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
+}
+[2022-11-15T16:12:45.758] [ERROR] errors - {
+  code: 400,
+  msg: '查找用户失败！',
+  result: ReferenceError: createResponseResult is not defined
+      at C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:23:43
+      at step (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:33:23)
+      at Object.next (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:14:53)
+      at fulfilled (C:\Users\unfetteredman\project\custom-project\current\koa-service\src\controller\user.controller.ts:5:58)
+      at processTicksAndRejections (node:internal/process/task_queues:96:5)
 }

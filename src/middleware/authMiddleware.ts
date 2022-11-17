@@ -6,7 +6,7 @@
  */
 import JWT from 'jsonwebtoken';
 import { Context, Next } from 'koa';
-import { TokenExpiredError, TokenVerifyError, TokenError } from '@/responseResult/User/loginResponseResult';
+import { TokenExpiredError, TokenVerifyError, TokenError } from '@/responseResult/user/loginResponseResult';
 
 const { SECRETKEY } = process.env;
 

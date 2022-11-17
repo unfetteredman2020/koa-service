@@ -1,13 +1,12 @@
 /*
  * @Author: 'weixingwang01'
  * @Date: 2022-10-09 11:46:36
- * @LastEditors: weixw2014@qq.com
- * @LastEditTime: 2022-11-01 17:46:37
+ * @LastEditors: unfetteredman
+ * @LastEditTime: 2022-11-15 13:36:02
  */
-import Koa, { DefaultContext, DefaultState, Context } from 'Koa';
+import Koa, { DefaultContext, DefaultState, Context, Request } from 'Koa';
 import router from '@/router/index';
 import path from 'path';
-
 
 const koaBody = require('koa-body');
 const koaStatic = require('koa-static');
@@ -57,7 +56,9 @@ app.use(
 // 设置withCredentials为true时，Access-Control-Allow-Origin不能设置为*
 app.use(
   koaCors({
-    origin() {
+    origin(ora:Request) {
+      const { url } = ora;
+      console.log('url: ', url);
       return '*';
     },
     exposeHeaders: ['Authorization'],
@@ -80,5 +81,5 @@ app.use(
 );
 
 app.listen(PORT, () => {
-  console.log('服务启动成功，running http://127.0.0.1:3000');
+  console.log(`服务启动成功，running http://127.0.0.1:${PORT}`);
 });

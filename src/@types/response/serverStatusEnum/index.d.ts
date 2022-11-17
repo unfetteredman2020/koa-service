@@ -1,5 +1,10 @@
-
-export enum ServerCodeEnums {
+/*
+ * @Author: unfetteredman
+ * @Date: 2022-11-03 15:14:32
+ * @LastEditors: unfetteredman
+ * @LastEditTime: 2022-11-15 14:10:33
+ */
+declare const enum ServerCodeEnums {
   Success = 200, // 资源请求成功
   EverRedirect = 301, // everReidrect 永久重定向
   TempRedirect = 302, // 临时重定向
