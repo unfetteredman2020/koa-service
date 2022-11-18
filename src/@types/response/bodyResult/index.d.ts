@@ -2,30 +2,19 @@
  * @Author: unfetteredman
  * @Date: 2022-11-15 14:17:32
  * @LastEditors: unfetteredman
- * @LastEditTime: 2022-11-17 09:42:06
+ * @LastEditTime: 2022-11-18 16:10:12
  */
 namespace ResponseBody {
   export interface ResponseBodyResult {
-    code: ServerCodeEnums,
+    code: ResponseCodeEnums,
     msg: string,
     result?: any
   }
 }
 
-type CreateResponseResults = {
-  code: ServerCodeEnums,
-  msg: string,
-  result: any,
-}
-
-declare class Create {
-  createResponseResult (code: ServerCodeEnums, msg: string, result: any) : CreateResponseResults
-}
-
-interface CreateResponseResultProps {
-  code: ServerCodeEnums,
+type CreateResponseResultProps = {
+  code: ResponseCodeEnums,
   msg: string,
   result?: any,
 }
-
 

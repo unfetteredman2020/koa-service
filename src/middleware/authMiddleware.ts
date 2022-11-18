@@ -1,12 +1,12 @@
 /*
  * @Author: unfetteredman
  * @Date: 2022-10-14 13:08:14
- * @LastEditors: weixw2014@qq.com
- * @LastEditTime: 2022-10-26 13:59:26
+ * @LastEditors: unfetteredman
+ * @LastEditTime: 2022-11-18 16:21:42
  */
 import JWT from 'jsonwebtoken';
 import { Context, Next } from 'koa';
-import { TokenExpiredError, TokenVerifyError, TokenError } from '@/responseResult/user/loginResponseResult';
+import Creator from '@/utils/create';
 
 const { SECRETKEY } = process.env;
 
@@ -22,7 +22,7 @@ class AuthMiddleware {
     try {
       const { authorization } = ctx.request.header;
       if (!authorization) {
-        return ctx.app.emit('error', TokenError, ctx);
+        return ctx.app.emit('error', Creator.createResponseResult(ResponseCodeEnums.ParamsError, '用户token参数错误', null), ctx);
       }
       const token = authorization.replace('Bearer ', '');
       JWT.verify(token, SECRETKEY);
@@ -31,15 +31,12 @@ class AuthMiddleware {
       switch (error.name) {
         case 'TokenExpiredError': // 过期token
           console.error('TokenExpiredError', error);
-          TokenExpiredError.result = error;
-          return ctx.app.emit('error', TokenExpiredError, ctx);
+          return ctx.app.emit('error', Creator.createResponseResult(ResponseCodeEnums.AuthError, 'token过期', `${error}`), ctx);
         case 'JsonWebTokenError': // token 错误
           console.error('JsonWebTokenError', error);
-          TokenVerifyError.result = error;
-          return ctx.app.emit('error', TokenVerifyError, ctx);
+          return ctx.app.emit('error', Creator.createResponseResult(ResponseCodeEnums.AuthError, 'token 错误', `${error}`), ctx);
         default:
-          TokenVerifyError.result = error;
-          return ctx.app.emit('error', TokenVerifyError, ctx);
+          return ctx.app.emit('error', Creator.createResponseResult(ResponseCodeEnums.AuthError, 'token 错误', `${error}`), ctx);
       }
     }
   }

@@ -2,9 +2,9 @@
  * @Author: unfetteredman
  * @Date: 2022-11-03 15:14:32
  * @LastEditors: unfetteredman
- * @LastEditTime: 2022-11-15 14:10:33
+ * @LastEditTime: 2022-11-18 16:14:52
  */
-declare const enum ServerCodeEnums {
+declare const enum ServerStatusEnums {
   Success = 200, // 资源请求成功
   EverRedirect = 301, // everReidrect 永久重定向
   TempRedirect = 302, // 临时重定向
@@ -19,3 +19,11 @@ declare const enum ServerCodeEnums {
   ServerError = 500, // 服务器错误
 }
 
+declare const enum ResponseCodeEnums {
+  Success = 200,
+  AuthError = 4001, // 授权错误，身份验证失败；
+  ParamsError = 4000, // 参数错误；
+  DBError = 5001, // 数据库错误；
+  AppError = 5000, // 程序错误；
+  CatchError = 40004, // catch error
+}

@@ -2,31 +2,34 @@
  * @Author: unfetteredman
  * @Date: 2022-11-14 16:47:27
  * @LastEditors: unfetteredman
- * @LastEditTime: 2022-11-15 13:29:46
+ * @LastEditTime: 2022-11-18 16:11:19
  */
-import { Context, Next } from 'koa';
+import { Context } from 'koa';
 import TabbarSevice from '@/service/config.service/tabbar.config.service';
+import Creator from '@/utils/create';
 
-interface GetTypes {
-  list: string
-}
+// interface TabbarItem {
+//   pagePath: string,
+//   iconPath: string,
+//   selectedIcon: string,
+//   text: string
+// }
+
+// interface GetTypes {
+//   list: TabbarItem[]
+// }
 
 class ConfigController {
-  tabbar: any;
-
-  constructor() {
-    this.tabbar = [];
-  }
-
-  public async get(ctx: Context, next: Next) {
+  public async get(ctx: Context) {
     try {
-      const res:GetTypes = await TabbarSevice.get();
+      const { list, ...res } = await TabbarSevice.get();
+      console.log('res :>> ', res);
       ctx.body = {
-        list: res && JSON.parse(res.list)
+        ...res,
+        list: JSON.parse(res.list)
       };
-      next();
     } catch (error) {
-      ctx.body = error;
+      ctx.app.emit('error', Creator.createResponseResult(ResponseCodeEnums.CatchError, '获取tabbar配置失败了', error), ctx);
     }
   }
 
