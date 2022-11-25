@@ -549,3 +549,6 @@
 [2022-11-18T15:51:53.598] [INFO] success - ::ffff:127.0.0.1 - - "GET /config/tabbar HTTP/1.1" 200 2 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
 [2022-11-18T15:52:14.728] [INFO] success - ::ffff:127.0.0.1 - - "GET /config/tabbar HTTP/1.1" 200 2 "" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"
 [2022-11-18T15:53:07.210] [INFO] success - ::ffff:127.0.0.1 - - "GET /config/tabbar HTTP/1.1" 200 53 "" "PostmanRuntime/7.29.2"
+[2022-11-18T16:39:40.502] [INFO] success - ::1 - - "POST /user/login HTTP/1.1" 200 370 "" "PostmanRuntime/7.29.2"
+[2022-11-18T16:39:44.194] [INFO] success - ::1 - - "POST /user/login HTTP/1.1" 200 34 "" "PostmanRuntime/7.29.2"
+[2022-11-18T16:40:22.142] [INFO] success - ::1 - - "POST /user/login HTTP/1.1" 200 370 "" "PostmanRuntime/7.29.2"

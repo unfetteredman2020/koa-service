@@ -2,7 +2,7 @@
  * @Author: unfetteredman
  * @Date: 2022-10-13 15:25:24
  * @LastEditors: unfetteredman
- * @LastEditTime: 2022-11-18 16:15:08
+ * @LastEditTime: 2022-11-18 16:41:03
  */
 import { Context } from 'koa';
 import UserService from '@/service/user.service';
@@ -21,7 +21,6 @@ class UserController {
       ctx.state = res;
       return ctx.body = Creator.createResponseResult(ResponseCodeEnums.Success, '登录成功', { token });
     } catch (error) {
-      console.error('LoginError', error);
       return ctx.app.emit('error', Creator.createResponseResult(ResponseCodeEnums.ParamsError, '用户登录失败，请稍后重试', error), ctx);
     }
   }
